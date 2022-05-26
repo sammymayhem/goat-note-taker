@@ -21,16 +21,16 @@ module.exports = () => {
       // Webpack plugin that generates our html file and injects our bundles. 
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'Not Taker'
+        title: 'Text Editor'
       }),
       new GenerateSW(),
       // Creates a manifest.json file.
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
-        name: 'Contact Cards',
-        short_name: 'Contact',
-        description: 'Never forget your contacts!',
+        name: 'Just Another Text Editor',
+        short_name: 'Text Editor',
+        description: 'Keep your notes all in one place!',
         background_color: '#225ca3',
         theme_color: '#225ca3',
         start_url: './',
