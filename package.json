@@ -5,11 +5,11 @@
   "main": "server.js",
   "scripts": {
     "start": "npm run build && cd server && npm start",
-    "server": "cd server && npm run server",
+    "server": "cd server && node server.js --ignore client",
     "build": "cd client && npm run build",
-    "install": "cd client && npm install && cd ../server && npm install",
+    "install": "cd client && npm install",
     "client": "cd client && npm start",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"cd server && npm run server\" \"cd client && npm run client\""
   },
   "keywords": [],
   "author": "",
@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "concurrently": "^5.2.0",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "webpack": "^5.69.1"
   }
 }
