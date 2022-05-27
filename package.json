@@ -5,27 +5,21 @@
   "main": "server.js",
   "scripts": {
     "start": "npm run build && cd server && npm start",
-    "server": "cd server && node server.js --ignore client",
+    "server": "cd server && node run server",
     "build": "cd client && npm run build",
     "install": "cd client && npm install",
     "client": "cd client && npm start",
-    "dev": "concurrently \"cd server && npm run server\" \"cd client && npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "html-webpack-plugin": "^5.5.0",
-    "idb": "^7.0.1",
-    "if-env": "^1.0.4",
-    "node": "^17.7.2",
-    "webpack-plugin": "^1.0.5"
+    "if-env": "^1.0.4"
   },
   "devDependencies": {
     "concurrently": "^5.2.0",
-    "nodemon": "^2.0.4",
-    "webpack": "^5.72.1",
-    "webpack-cli": "^4.9.2"
+    "nodemon": "^2.0.4"
   }
 }
